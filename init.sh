@@ -9,4 +9,5 @@ sudo /etc/init.d/nginx restart
 #gunicorn conf
 touch /home/box/gunicorn.log
 sudo ln -sf /home/box/web/etc/hello.py   /etc/gunicorn.d/hello.py
+sudo ln -sf /home/box/web/etc/gunicorn.conf   /etc/gunicorn.d/ask
 sudo /etc/init.d/gunicorn restart
