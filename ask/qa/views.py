@@ -9,11 +9,11 @@ def test(request, *args, **kwargs):
 
 def paginate(request, questions):
     try:
-        limit = int(request.GET.get('limit', 3))
+        limit = int(request.GET.get('limit', 10))
     except ValueError:
-        limit = 3
+        limit = 10
     if limit > 100:
-        limit = 3
+        limit = 10
 
     try:
         page = int(request.GET.get('page', 1))
