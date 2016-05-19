@@ -1,0 +1,76 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>{% block title %}Ask Pupkin{% endblock %}</title>
+  <link href="{% static 'css/style.css' %}" rel="stylesheet">
+
+</head>
+
+<body>
+  <header class="main-header">
+    <div class="container-main">
+      <div class="container clearfix">
+        <a class="header-logo">
+          <div class="header-logo-name">
+            Expert
+          </div>
+        </a>
+
+        <div class="header-navigation">
+          <nav class="main-navigation">
+            <ul>
+              <li>
+                <a href="/">Home</a>
+              </li>
+              <li>
+                <a href="/popular">Popular Questions</a>
+              </li>
+              <li>
+                <a href="/ask/">Ask Question</a>
+              </li>
+              <li class="login">
+                <a href="/login/">Login</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="container-main container-index">
+    <div class="container">
+      <div class="question-list">
+        {% block content %}{% endblock %}
+        <!--<h2 class="question-view-h2">-->
+        <!--Аппаратура контроля напуска каната-->
+        <!--</h2>-->
+        <!--<p class="question-view-p">-->
+        <!--Мы обеспечим Вас аппаратурой контроля напуска каната АКНК-1, предназначенной для защиты шахтных подъемных установок от напуска каната,-->
+        <!--зависания направляющей рамки бадьи, а также для ограничения натяжения каната лебедки, ремонтной радиосвязи и связи &laquo;клеть – машинист&raquo;.-->
+        <!--</p>-->
+      </div>
+
+    </div>
+  </div>
+
+
+<footer class="main-footer">
+  <div class="container-main">
+    <div class="container container-footer clearfix">
+    	<div class="footer-main-left">
+    		<p class="admin"><a href="/admin/">Admin</a></p>
+        </div>
+        <div class="footer-main-copyright">
+          <p class="footer-copyright">&copy O.K. 2016. Powered by Django </p>
+        </div>
+    </div>
+  </div>
+</footer>
+
+
+</body>
+
+</html>
