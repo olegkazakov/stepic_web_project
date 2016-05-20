@@ -9,7 +9,7 @@
   {% for question in questions %}
     <div class="question-list-block">
     {% block question_title %}
-      <h2><a href="">{{ question.title }}</a></h2>
+      <h2><a href="{{ question.get_absolute_url }}">{{ question.title }}</a></h2>
       {% block question_text %}
       <div class="question-list-title">{{ question.text }}</div>
       {% endblock %}
