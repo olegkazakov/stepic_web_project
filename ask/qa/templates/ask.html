@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %} Expert // Ask Question{% endblock %}
+
+{% block content %}
+  <h1>Ask Question</h1>
+  {% for error in form.non_field_errors %}
+    <div class="alert">{{ error }}</div>
+  {% endfor %}
+  <div class="form">
+    <form method="post" action="/ask/">
+      {% csrf_token %}
+        {% for field in form %}
+          <div class="form-group{% if field.errors %} alert{% endif %}">
+            <div class="form-label">
+              {{ field.label }}
+            </div>
+            <div class="form-field">
+              {{ field }}
+            </div>
+            {{ field.errors }}
+          </div>
+        {% endfor %}
+        <button type="submit" class="btn">Ask question</button>
+    </form>
+  </div>
+{% endblock %}

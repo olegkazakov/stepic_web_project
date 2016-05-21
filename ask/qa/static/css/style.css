@@ -128,10 +128,11 @@ h2 {
   font-size: 1.5em;
 }
 
-.question-list {
+.content {
   width: 530px;
   min-height: 100px;
   margin-bottom: 25px;
+  margin-left: 30px;
   color: #141414;
 }
 
@@ -204,8 +205,31 @@ div.pagination span {
   margin: 10px 0 10px 30px;
   padding: 10px 20px;
 }
+
 .info {
   color: #0B8BD2;
+}
+
+.form label {
+  display: block;
+}
+
+.form input {
+  padding: 5px;
+}
+
+.form-field {
+  margin-bottom: 15px;
+}
+
+.alert {
+  color: indianred;
+}
+
+.alert input,
+.alert textarea {
+  background-color: #FFE8E8;
+  border: 1px solid indianred;
 }
 
 .main-footer {
