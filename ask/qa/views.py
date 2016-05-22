@@ -65,7 +65,7 @@ def question_detail(request, pk):
     })
 
 def question_ask(request):
-    if  request.method == 'POST':
+    if request.method == 'POST':
         form = AskForm(request.POST)
         if form.is_valid():
             form._user = request.user
