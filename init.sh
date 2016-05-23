@@ -10,7 +10,7 @@ sudo /etc/init.d/nginx restart
 #gunicorn conf
 touch /home/box/gunicorn.log
 #sudo ln -sf /home/box/web/etc/hello.py   /etc/gunicorn.d/hello.py
-sudo ln -sf /home/box/web/etc/gunicorn.conf   /etc/gunicorn.d/ask
+#sudo ln -sf /home/box/web/etc/gunicorn.conf   /etc/gunicorn.d/ask
 sudo /etc/init.d/gunicorn restart
 
 sudo service mysql restart
@@ -20,4 +20,4 @@ mysql -uroot -e "GRANT ALL PRIVILEGES ON ask.* TO 'ok_ask'@'localhost'"
 
 python /home/box/web/ask/manage.py syncdb
 #remove /etc/gunicorn.d/ask before run
-#python /home/box/web/ask/manage.py runserver 0.0.0.0:8000 &
+python /home/box/web/ask/manage.py runserver 0.0.0.0:8000 &
