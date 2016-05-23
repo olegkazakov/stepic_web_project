@@ -53,11 +53,12 @@ body {
   float: left;
   width: 100px;
   margin-top: 20px;
+  margin-left: 30px;
 }
 
 .header-navigation {
   float: right;
-  max-width: 640px;
+  min-width: 725px;
 }
 
 .logo {
@@ -252,6 +253,7 @@ div.pagination span {
 
 .footer-main-left {
   float: left;
+  margin-left: 30px;
 }
 
 .footer-main-copyright {

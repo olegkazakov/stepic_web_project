@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %} Expert // Sign Up{% endblock %}
+
+{% block content %}
+  <h1>Sign Up</h1>
+  {% for error in form.non_field_errors %}
+    <div class="alert">{{ error }}</div>
+  {% endfor %}
+  <div class="form">
+    <form method="post" action="/signup/">
+      {% csrf_token %}
+        {% for field in form %}
+          <div class="form-group{% if field.errors %} alert{% endif %}">
+            <div class="form-label">
+              {{ field.label }}
+            </div>
+            <div class="form-field">
+              {{ field }}
+            </div>
+            {{ field.errors }}
+          </div>
+        {% endfor %}
+        <button type="submit" class="btn">Sign up!</button>
+    </form>
+  </div>
+{% endblock %}
